@@ -20,6 +20,12 @@ st.write("This app uses 6 inputs to predict the species of penguin using "
 
          " to get started!") 
 
+# Asking user to enter a password before the rest of the application loads
+password_guess = st.text_input("What is the Password?")
+# if the password is incorrect, stop the app from running
+if password_guess != "streamlit_password":
+   st.stop()
+
 # Asking users to input their own data
 penguin_file = st.file_uploader('Upload your own penguin data') 
 
